@@ -46,8 +46,8 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                   </Button>
                 )}
 
-                <Popover.Button>
-                  <img
+                {/* <Popover.Button> */}
+                  {/* <img
                     className="h-5"
                     src={`/images/${
                       !open
@@ -58,8 +58,8 @@ const Header = ({ handleWorkScroll, handleAboutScroll, isBlog }) => {
                         ? "cancel.svg"
                         : "cancel-white.svg"
                     }`}
-                  ></img>
-                </Popover.Button>
+                  ></img> */}
+                {/* </Popover.Button> */}
               </div>
             </div>
             <Popover.Panel

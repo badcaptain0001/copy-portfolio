@@ -11,7 +11,7 @@ const WorkCard = ({ img, name, description, onClick, type }) => {
         >
           <img
             alt={name}
-            className="h-full w-full object-cover hover:scale-110 transition-all ease-out duration-300"
+            className="h-full w-full object-contain transition-all ease-out duration-300 shadow-2xl"
             src={img}
           ></img>
         </div>
@@ -22,7 +22,7 @@ const WorkCard = ({ img, name, description, onClick, type }) => {
         >
           <img
             alt={name}
-            className="h-full w-full object-cover hover:scale-110 transition-all ease-out duration-300"
+            className="h-full w-full object-contain transition-all ease-out duration-300 shadow-2xl"
             src={img}
           ></img>
         </div>
@@ -33,7 +33,7 @@ const WorkCard = ({ img, name, description, onClick, type }) => {
         >
           <img
             alt={name}
-            className="h-full w-full object-cover hover:scale-110 transition-all ease-out duration-300"
+            className="h-full w-full object-contain transition-all ease-out duration-300 shadow-2xl"
             src={img}
           ></img>
         </div>
