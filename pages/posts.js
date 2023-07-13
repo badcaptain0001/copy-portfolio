@@ -22,7 +22,7 @@ function posts() {
     <div>
       <Header handleWorkScroll={handleWorkScroll}
         handleAboutScroll={handleAboutScroll} />
-        <h1 className="tablet:m-10 text-8xl text-bold">Posts.</h1>
+        <h1 className="tablet:m-10 text-8xl text-bold">Social Media Posts.</h1>
           <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-2 gap-4">
             {data.projects.map((project) => (
               <WorkCard

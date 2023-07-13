@@ -22,7 +22,7 @@ function banners() {
     <div>
       <Header handleWorkScroll={handleWorkScroll}
         handleAboutScroll={handleAboutScroll} />
-                <h1 className="tablet:m-10 text-8xl text-bold">Banners.</h1>
+                <h1 className="tablet:m-10 text-8xl text-bold">Website Banners.</h1>
           <div className="mt-5 laptop:mt-10">
             {data.banners.map((project) => (
               <WorkCard
