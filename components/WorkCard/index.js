@@ -7,7 +7,7 @@ const WorkCard = ({ img, name, description, onClick, type }) => {
       {type === "email" ? (
         <div
           className="relative rounded-lg overflow-hidden transition-all ease-out duration-300 h-48 mob:h-auto"
-          style={{ height: "3000px" }}
+          // style={{ height: "3000px" }}
         >
           <img
             alt={name}
@@ -18,7 +18,7 @@ const WorkCard = ({ img, name, description, onClick, type }) => {
       ) : type === "banner" ? (
         <div
           className="relative rounded-lg overflow-hidden transition-all ease-out duration-300 h-48 mob:h-auto"
-          style={{ height: "600px",width:"100%" }}
+          // style={{ height: "600px",width:"100%" }}
         >
           <img
             alt={name}
@@ -29,7 +29,7 @@ const WorkCard = ({ img, name, description, onClick, type }) => {
       ) : (
         <div
           className="relative rounded-lg overflow-hidden transition-all ease-out duration-300 h-48 mob:h-auto"
-          style={{ height: "600px" }}
+          // style={{ height: "600px" }}
         >
           <img
             alt={name}
