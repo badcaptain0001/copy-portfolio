@@ -1,10 +1,10 @@
-import React from 'react'
+import React,{useEffect,useState} from 'react'
 import Header from "../components/Header";
 import WorkCard from "../components/WorkCard";
 import data from "../data/portfolio.json";
-import { isDesktop } from 'react-device-detect';
 
-function posts() {
+function Posts() {
+  const [mobile, setMobile] = useState(false);
   const handleWorkScroll = () => {
     window.scrollTo({
       top: workRef.current.offsetTop,
@@ -19,12 +19,24 @@ function posts() {
       behavior: "smooth",
     });
   };
+  function myfunction() {
+    var answer = window.orientation > 1;
+    if (answer) {
+      setMobile(true);
+    }
+    else {
+      setMobile(false);
+    }
+ }
+ useEffect(() => {
+  myfunction();
+ }, [mobile]);
   return (
     <div>
       <Header handleWorkScroll={handleWorkScroll}
         handleAboutScroll={handleAboutScroll} />
         <h1 className="tablet:m-10 text-8xl text-bold">Social Media Posts.</h1>
-          {isDesktop ? <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-2 gap-4">
+          {!mobile ? <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-2 gap-4">
             {data.projects.map((project) => (
               <WorkCard
                 key={project.id}
@@ -34,7 +46,8 @@ function posts() {
                 onClick={() => window.open(project.url)}
               />
             ))}
-          </div>:<div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-2 gap-4">
+          </div>
+          :<div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-2 gap-4">
             {data.mobileData.map((project) => (
               <WorkCard
                 key={project.id}
@@ -49,4 +62,4 @@ function posts() {
   )
 }
 
-export default posts
+export default Posts
