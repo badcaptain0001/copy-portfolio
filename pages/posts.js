@@ -36,7 +36,7 @@ function Posts() {
       <Header handleWorkScroll={handleWorkScroll}
         handleAboutScroll={handleAboutScroll} />
         <h1 className="tablet:m-10 text-8xl text-bold">Social Media Posts.</h1>
-          {!mobile ? <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-2 gap-4">
+          <div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-2 gap-4">
             {data.projects.map((project) => (
               <WorkCard
                 key={project.id}
@@ -47,17 +47,6 @@ function Posts() {
               />
             ))}
           </div>
-          :<div className="mt-5 laptop:mt-10 grid grid-cols-1 tablet:grid-cols-2 gap-4">
-            {data.mobileData.map((project) => (
-              <WorkCard
-                key={project.id}
-                img={project.imageSrc}
-                name={project.title}
-                description={project.description}
-                onClick={() => window.open(project.url)}
-              />
-            ))}
-          </div>}
     </div>
   )
 }
