@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import Header from "../components/Header";
+import { Document, Page, Text, View, StyleSheet,PDFViewer } from '@react-pdf/renderer';
 
 function Digitalcampaigns() {
   const handleWorkScroll = () => {
@@ -17,6 +18,7 @@ function Digitalcampaigns() {
       behavior: "smooth",
     });
   };
+  // "https://usc1.contabostorage.com/f49065475849480fbcd19fb8279b2f98:personal/CAP1.pdf
   return (
     <>
       <Header
@@ -26,12 +28,8 @@ function Digitalcampaigns() {
       <h1 className="tablet:m-10 text-8xl text-bold">Digital Campaigns</h1>
       <h4 className="tablet:m-10 text-2xl text-bold">Fortune Oils and Foods: Digital Campaign for Mother&apos;s Day</h4>
       <div className="flex flex-col items-center justify-center min-h-screen py-2">
-        <object
-          type="application/pdf"
-          data="https://usc1.contabostorage.com/f49065475849480fbcd19fb8279b2f98:personal/CAP1.pdf"
-          width="100%"
-          height="800"
-        ></object>
+      {/* render pdf url */}
+      <iframe src="https://usc1.contabostorage.com/f49065475849480fbcd19fb8279b2f98:personal/digitalcampaigns.pdf" width="100%" height="800"></iframe>
       </div>
     </>
   );
