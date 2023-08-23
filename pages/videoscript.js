@@ -25,6 +25,7 @@ function videoscript() {
         handleAboutScroll={handleAboutScroll}
       />
       <h1 className="tablet:m-10 text-8xl text-bold">Video Script</h1>
+      <h4 className="tablet:m-10 text-2xl text-bold">Clicbrics Brand Video Script</h4>
       <div className="mt-5 laptop:mt-10">
         {data.video.map((project) => (
           <WorkCard
