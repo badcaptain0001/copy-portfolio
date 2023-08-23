@@ -26,7 +26,14 @@ const WorkCard = ({ img, name, description, onClick, type }) => {
             src={img}
           ></img>
         </div>
-      ) : (
+      ):type==="video"? <div
+          className="relative rounded-lg overflow-hidden transition-all ease-out duration-300 h-48 mob:h-auto"
+          // style={{ height: "600px",width:"100%" }}
+        >
+        <video playsInline autoPlay  loop controls>
+          <source src={img} type="video/mp4" />
+        </video>
+        </div>  : (
         <div
           className="relative rounded-lg overflow-hidden transition-all ease-out duration-300 h-48 mob:h-auto"
           // style={{ height: "600px" }}
